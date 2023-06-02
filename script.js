@@ -2,6 +2,7 @@ window.promises = [];
 
 // Do not change the code above this
 // add your promises to the array `promises`
+
 function getRandomDelay() {
   return Math.floor(Math.random() * 5000) + 1000; // Random time between 1 and 5 seconds in milliseconds
 }
@@ -23,10 +24,10 @@ const promises = [
 ];
 
 Promise.any(promises)
-.then(result => {
+  .then(result => {
     const outputDiv = document.getElementById('output');
     outputDiv.textContent = `The first resolved promise result is: ${result.toFixed(3)}`;
-})
-.catch(error => {
-  console.log(error);
-});
+  })
+  .catch(error => {
+    console.log(error);
+  });
