@@ -26,7 +26,7 @@ const promises = [
 Promise.any(promises)
   .then(result => {
     const outputDiv = document.getElementById('output');
-    outputDiv.textContent = `The first resolved promise result is: ${result.toFixed(3)}`;
+    outputDiv.textContent = `${result.toFixed(3)}`;
   })
   .catch(error => {
     console.log(error);
